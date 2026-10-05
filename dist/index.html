@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ee"><meta name="description" content="Woofdoku 狗狗邏輯棋盤。每行、每列、每個色塊各放一隻狗狗，狗狗彼此不能相鄰。">
+  <meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Woofdoku">
+  <title>Woofdoku | 狗狗邏輯棋盤</title>
+  <link rel="icon" href="assets/dog-cartoon.png"><link rel="apple-touch-icon" href="assets/dog-cartoon.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="./" aria-label="Woofdoku 首頁"><img src="assets/dog-cartoon.png" alt=""><span>woofdoku<span class="brand-dot">.</span></span></a><div class="header-actions"><button id="menu" class="icon-button" aria-label="開啟遊戲選單"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14"/></svg></button></div></header>
+    <main>
+      <aside class="side-panel"><div class="eyebrow">A LITTLE PAWS, A LITTLE LOGIC</div><h1>幫狗狗<br>找個好位子。</h1><p class="intro">觀察色塊，慢慢推理。<br>讓每一隻狗狗都有自己的空間。</p><div class="mascot-wrap"><img class="mascot" src="assets/dog-cartoon.png" alt="棕色垂耳狗狗"><span class="mascot-caption">今天也陪你動動腦</span></div><div class="side-progress"><span>你的探索</span><strong id="completed-count">0 / 60 關</strong><div class="progress-track"><div id="overall-progress"></div></div></div><p class="save-note">進度會自動保存在這個瀏覽器</p></aside>
+      <section class="game-panel" aria-label="狗狗邏輯遊戲">
+        <div class="level-heading"><button id="level-picker" class="level-select"><span class="eyebrow" id="difficulty">初次散步 · 5 × 5</span><span class="level-title">第 <b id="level-number">01</b> 關<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7 5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></button><div class="status"><span id="timer" class="timer" aria-label="遊玩時間">00:00</span><span id="hearts" class="hearts" aria-label="剩餘三次機會"></span></div></div>
+        <div class="rules-strip"><div><span class="rule-icon">1</span><span>每色一隻</span></div><div><span class="rule-icon">1</span><span>每行列一隻</span></div><div><svg class="rule-icon" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2"/></svg><span>不能相鄰</span></div></div>
+        <div class="board-frame"><div id="board" class="board" role="group" aria-label="棋盤"></div></div>
+        <div class="board-meta"><span id="dog-count">找到 0 / 5 隻</span><span>斜角也算相鄰</span></div>
+        <div class="gesture-guide"><span><span class="cross-icon" aria-hidden="true"></span>單擊／滑動標叉叉</span><span><img src="assets/dog-cartoon.png" alt="">雙擊放狗狗</span></div>
+        <p id="instruction" class="instruction">叉叉自由標記，狗狗位置會驗證</p>
+        <div class="tools"><button id="undo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8H3V3m0 5a9 9 0 1 1-1 8"/></svg>復原</button><button id="hint" aria-label="免費提示，不限次數"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-6 3h6M8 14a7 7 0 1 1 8 0l-1 2H9z"/></svg>免費提示</button></div>
+        <div id="message" class="message" role="status" aria-live="polite"></div>
+      </section>
+    </main>
+    <footer><span>WOOFDOKU</span><span>一格一格，找到答案。</span></footer>
+  </div>
+  <dialog id="modal"><div class="dialog-top"><span id="dialog-label" class="eyebrow"></span><button id="close-modal" class="icon-button" aria-label="關閉視窗"><span class="cross-icon"></span></button></div><div id="dialog-content"></div></dialog>
+  <script type="module" src="app.js?v=5"></script>
+</body>
+</html>

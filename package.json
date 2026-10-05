@@ -1,0 +1,14 @@
+{
+  "name": "woofdoku",
+  "version": "1.0.0",
+  "private": true,
+  "description": "狗狗主題的 RWD 邏輯解謎遊戲，60 關、無限免費提示、無廣告，支援手機觸控。",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000 --directory dist"
+  }
+}
