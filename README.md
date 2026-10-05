@@ -4,7 +4,9 @@
 
 [![Test and deploy](https://github.com/aiwlulu/woofdoku/actions/workflows/pages.yml/badge.svg)](https://github.com/aiwlulu/woofdoku/actions/workflows/pages.yml)
 
-**GitHub Pages 遊玩網址：** <https://aiwlulu.github.io/woofdoku/>，首次成功部署後可用。
+**立即遊玩：[Woofdoku 狗狗邏輯棋盤](https://aiwlulu.github.io/woofdoku/)**
+
+已部署至 GitHub Pages，手機與電腦皆可直接開啟。
 
 <img src="dist/assets/dog-cartoon.png" alt="Woofdoku 的棕色垂耳卡通狗狗" width="160">
 
@@ -58,9 +60,13 @@ npm test
 
 ## GitHub Pages 部署
 
+目前已啟用 GitHub Pages，發布網址為 <https://aiwlulu.github.io/woofdoku/>。後續推送至 `main` 會自動執行測試，通過後更新網站。
+
 本 repo 使用 GitHub Actions 測試後發布 `dist/`。GitHub Free 的公開 repo 可使用 GitHub Pages，無須綁定信用卡或購買網域。
 
-1. 在 repo 的 **Settings → Pages → Build and deployment → Source** 選 **GitHub Actions**。
+如需重新設定或手動發布：
+
+1. 確認 repo 的 **Settings → Pages → Build and deployment → Source** 為 **GitHub Actions**。
 2. 推送至 `main`，或到 **Actions → Test and deploy → Run workflow** 手動執行。
 3. 等待 `test` 與 `deploy` 成功，從部署環境或 Pages 設定取得遊玩網址。
 
